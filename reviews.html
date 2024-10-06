@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIEWS</title>
+</head>
+<style>
+    body{
+        background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .reviews{
+        text-align: center;
+        margin-top: 24px;
+        color: #3643f4;
+    }
+    .box{
+        background-color: #f2f2f2;
+        height: 200px;
+        width: 350px;
+        border-radius: 20px;
+        align-content: center;
+        transition: 0.3s;
+
+        &:hover{
+            height: 220px;
+            width: 360px;
+            box-shadow: 40px;
+        }
+    }
+    .main{
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .review-form input, 
+.review-form select, 
+.review-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.review-form button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.review-form button:hover {
+    background-color: #218838;
+}
+
+    footer img{
+        margin-left: 20px;
+        margin-top: 30px;
+        height: 200px;
+        width: 350px;
+    }
+</style>
+<body>
+    <header class="reviews">
+        <h1>REVIEWS</h1>
+        <p>*****</p>
+    </header>
+    <hr>
+    <div class="main">
+        <div class="box">
+            <h3>John Doe</h3>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p class="review-text">This product has exceeded my expectations! Highly recommend it.</p>
+        </div>
+        <div class="box">
+            <h3>John Doe</h3>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p class="review-text">This product has exceeded my expectations! Highly recommend it.</p>
+        </div>
+        <div class="box">
+            <h3>John Doe</h3>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p class="review-text">This product has exceeded my expectations! Highly recommend it.</p>
+        </div>
+        <div class="box">
+            <h3>John Doe</h3>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p class="review-text">This product has exceeded my expectations! Highly recommend it.</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            review 5
+        </div>
+        <div class="box">
+            review 6
+        </div>
+        <div class="box">
+            review 7
+        </div>
+        <div class="box">
+            review 8
+        </div>
+    </div>
+    <section class="review-form">
+        <h2>Leave a Review</h2>
+        <form id="review-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <select id="rating" required>
+                <option value="" disabled selected>Rating</option>
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★☆</option>
+                <option value="3">★★★☆☆</option>
+                <option value="2">★★☆☆☆</option>
+                <option value="1">★☆☆☆☆</option>
+            </select>
+            <textarea id="review-text" placeholder="Your Review" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+    <footer>
+        <img src="images/logo.png" alt="">
+    </footer>
+    <!-- <script>
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get the values from the form
+    const name = document.getElementById('name').value;
+    const rating = document.getElementById('rating').value;
+    const reviewText = document.getElementById('review-text').value;
+
+    // Create a new review element
+    const newReview = document.createElement('div');
+    newReview.classList.add('review');
+    newReview.innerHTML = `
+        <h3>${name}</h3>
+        <p class="rating">Rating: ${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</p>
+        <p class="review-text">${reviewText}</p>
+    `;
+
+    // Append the new review to the reviews section
+    document.getElementById('new-review').appendChild(newReview);
+
+    // Clear the form
+    document.getElementById('review-form').reset();
+});
+    </script> -->
+</body>
+</html>
